@@ -70,3 +70,8 @@ License
 -------
 
 The project is licensed under the GPLv2.
+
+
+.. image:: https://badges.gitter.im/collective/collective.edtf_behavior.svg
+   :alt: Join the chat at https://gitter.im/collective/collective.edtf_behavior
+   :target: https://gitter.im/collective/collective.edtf_behavior?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
