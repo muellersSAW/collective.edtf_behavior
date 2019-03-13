@@ -10,12 +10,12 @@
     <!-- -*- extra stuff goes here -*- -->
 
     <plone:behavior
-        name="collective.edtf_behavior.e_d_t_f_date"
+        name="collective.edtf_behavior.edtf_date"
         title="EDTFDate"
         description="This behavior provides a EDTF field and 4 indexers date_earliest, date_latest, date_sort_ascending and date_sort_descending, for flexible filtering and sorting on dates and date ranges."
-        provides=".e_d_t_f_date.IEDTFDate"
-        factory=".e_d_t_f_date.EDTFDate"
-        marker=".e_d_t_f_date.IEDTFDateMarker"
+        provides=".edtf_date.IEDTFDate"
+        factory=".edtf_date.EDTFDate"
+        marker=".edtf_date.IEDTFDateMarker"
         />
 
 
