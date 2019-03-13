@@ -1,38 +1,32 @@
-.. This README is meant for consumption by humans and pypi. Pypi can render rst files so please do not use Sphinx features.
-   If you want to learn more about writing documentation, please check out: http://docs.plone.org/about/documentation_styleguide.html
-   This text does not appear on pypi or github. It is a comment.
+.. image:: https://secure.travis-ci.org/plone/collective.edtf.png?branch=master
+    :target: http://travis-ci.org/plone/collective.edtf
+
+.. image:: https://coveralls.io/repos/github/plone/collective.edtf/badge.svg?branch=master
+    :target: https://coveralls.io/github/plone/collective.edtf?branch=master
+    :alt: Coveralls
+
+.. image:: https://img.shields.io/pypi/l/collective.edtf.svg
+    :target: https://pypi.python.org/pypi/collective.edtf/
+    :alt: License
+
 
 ========================
 collective.edtf_behavior
 ========================
 
-Tell me what your product does
+A Plone behavior which provides a `EDTF <http://www.loc.gov/standards/datetime/edtf.html>`_  Date field and some indexes to search and sort on complex and historic dates.
+
+Note: the current implementation of the used library `python-edtf <https://pypi.org/project/edtf/>`_ , still uses an earlier draft of the standard: http://www.loc.gov/standards/datetime/pre-submission.html
+
 
 Features
 --------
 
-- Can be bullet points
-
-
-Examples
---------
-
-This add-on can be seen in action at the following sites:
-- Is there a page on the internet where everybody can see the features?
-
-
-Documentation
--------------
-
-Full documentation for end users can be found in the "docs" folder, and is also available online at http://docs.plone.org/foo/bar
-
-
-Translations
-------------
-
-This product has been translated into
-
-- Klingon (thanks, K'Plai)
+- Allows unspecific dates or date intervals: "1989-11" or "1989-11~" or "1989-11-01/1989-11-30"
+- Seasons: 2001-21  >> Spring, 2001
+- old dates like 03.08.1492
+- Search indexes: date_earliest and date_latest
+- Sort indexes: date_sort_ascending and date_sort_descending
 
 
 Installation
@@ -50,20 +44,21 @@ Install collective.edtf_behavior by adding it to your buildout::
 
 and then running ``bin/buildout``
 
+After you activated the add-on in the Plone Add-ons section, you can Enable this behavior on any Dexterity based content type.
+
 
 Contribute
 ----------
 
 - Issue Tracker: https://github.com/collective/collective.edtf_behavior/issues
 - Source Code: https://github.com/collective/collective.edtf_behavior
-- Documentation: https://docs.plone.org/foo/bar
 
 
 Support
 -------
 
 If you are having issues, please let us know.
-We have a mailing list located at: project@example.com
+You can reach us on Gitter.
 
 
 License

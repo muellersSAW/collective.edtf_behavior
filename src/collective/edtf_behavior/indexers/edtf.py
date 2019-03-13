@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
-from collective.edtf_behavior.behaviors.edtf_date import IEDTFDateMarker
 from collective.edtf_behavior.behaviors.edtf_date import IEDTFDate
+from collective.edtf_behavior.behaviors.edtf_date import IEDTFDateMarker
 from plone.dexterity.interfaces import IDexterityContent
 from plone.indexer import indexer
-from zope.interface import Interface
 
 
 @indexer(IDexterityContent)

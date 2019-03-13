@@ -1,16 +1,14 @@
 # -*- coding: utf-8 -*-
-from collective.edtf_behavior.behaviors.edtf_date import IEDTFDateMarker
 from collective.edtf_behavior.behaviors.edtf_date import IEDTFDate
+from collective.edtf_behavior.behaviors.edtf_date import IEDTFDateMarker
 from collective.edtf_behavior.testing import COLLECTIVE_EDTF_BEHAVIOR_INTEGRATION_TESTING  # noqa
 from plone import api
 from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID
-from plone.behavior.interfaces import IBehavior
-from zope.component import getUtility
-from zope.event import notify
-from zope.component import queryUtility
 from plone.dexterity.interfaces import IDexterityFTI
 from plone.dexterity.schema import SchemaInvalidatedEvent
+from zope.component import queryUtility
+from zope.event import notify
 
 import datetime
 import unittest
@@ -211,4 +209,3 @@ class EDTFDateSearchIntegrationTest(unittest.TestCase):
             result_list,
             ['1711-11-11', '1920-02-03/1933-04-30', '1920-02-06/1933-04-28'],
         )
-
