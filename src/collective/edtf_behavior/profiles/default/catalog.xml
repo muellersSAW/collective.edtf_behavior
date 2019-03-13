@@ -6,7 +6,7 @@
   <index name="date_earliest" meta_type="DateIndex">
     <indexed_attr value="date_earliest" />
   </index>
-  <index name="date_latest" meta_type="DateIndex">
+  <index name="date_latest" meta_type="FieldIndex">
     <indexed_attr value="date_latest" />
   </index>
   <index name="date_sort_ascending" meta_type="DateIndex">
