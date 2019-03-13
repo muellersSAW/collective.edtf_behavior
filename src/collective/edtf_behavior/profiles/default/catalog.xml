@@ -1,12 +1,9 @@
 <?xml version="1.0"?>
 <object name="portal_catalog">
-  <index name="edtf_date" meta_type="FieldIndex">
-    <indexed_attr value="edtf_date" />
-  </index>
   <index name="date_earliest" meta_type="DateIndex">
     <indexed_attr value="date_earliest" />
   </index>
-  <index name="date_latest" meta_type="FieldIndex">
+  <index name="date_latest" meta_type="DateIndex">
     <indexed_attr value="date_latest" />
   </index>
   <index name="date_sort_ascending" meta_type="DateIndex">

@@ -5,15 +5,9 @@
   -*- extra stuff goes here -*-
 
   <!-- dummy indexer, to prevent traversed indexing -->
-  <!--<adapter
+  <adapter
     name="date_earliest"
     factory=".edtf.dummy"
-    />-->
-
-  <!-- indexer -->
-  <adapter
-    name="edtf_date"
-    factory=".edtf.edtf_date"
     />
 
   <!-- indexer -->
