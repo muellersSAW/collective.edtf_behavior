@@ -9,6 +9,10 @@
     :target: https://pypi.python.org/pypi/collective.edtf/
     :alt: License
 
+.. image:: https://badges.gitter.im/collective/collective.edtf_behavior.svg
+   :alt: Join the chat at https://gitter.im/collective/collective.edtf_behavior
+   :target: https://gitter.im/collective/collective.edtf_behavior?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
+   
 
 ========================
 collective.edtf_behavior
@@ -65,8 +69,3 @@ License
 -------
 
 The project is licensed under the GPLv2.
-
-
-.. image:: https://badges.gitter.im/collective/collective.edtf_behavior.svg
-   :alt: Join the chat at https://gitter.im/collective/collective.edtf_behavior
-   :target: https://gitter.im/collective/collective.edtf_behavior?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
