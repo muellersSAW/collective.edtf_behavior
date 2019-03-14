@@ -44,7 +44,8 @@ class EDTFDate(object):
 
     @edtf_date.setter
     def edtf_date(self, value):
-        self.context.edtf_date = edtf.text_to_edtf(value)
+        edtf_date = value
+        self.context.edtf_date = edtf_date
 
     @property
     def date_earliest(self):
