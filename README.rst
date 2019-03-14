@@ -1,8 +1,8 @@
 .. image:: https://secure.travis-ci.org/collective/collective.edtf_behavior.png?branch=master
     :target: http://travis-ci.org/collective/collective.edtf_behavior
 
-.. image:: https://coveralls.io/repos/github/plone/collective.edtf_behavior/badge.svg?branch=master
-    :target: https://coveralls.io/github/plone/collective.edtf_behavior?branch=master
+.. image:: https://coveralls.io/repos/github/collective/collective.edtf_behavior/badge.svg?branch=master
+    :target: https://coveralls.io/github/collective/collective.edtf_behavior?branch=master
     :alt: Coveralls
 
 .. image:: https://img.shields.io/pypi/l/collective.edtf_behavior.svg
