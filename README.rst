@@ -1,12 +1,12 @@
-.. image:: https://secure.travis-ci.org/plone/collective.edtf.png?branch=master
-    :target: http://travis-ci.org/plone/collective.edtf
+.. image:: https://secure.travis-ci.org/collective/collective.edtf_behavior.png?branch=master
+    :target: http://travis-ci.org/collective/collective.edtf_behavior
 
-.. image:: https://coveralls.io/repos/github/plone/collective.edtf/badge.svg?branch=master
-    :target: https://coveralls.io/github/plone/collective.edtf?branch=master
+.. image:: https://coveralls.io/repos/github/plone/collective.edtf_behavior/badge.svg?branch=master
+    :target: https://coveralls.io/github/plone/collective.edtf_behavior?branch=master
     :alt: Coveralls
 
-.. image:: https://img.shields.io/pypi/l/collective.edtf.svg
-    :target: https://pypi.python.org/pypi/collective.edtf/
+.. image:: https://img.shields.io/pypi/l/collective.edtf_behavior.svg
+    :target: https://pypi.python.org/pypi/collective.edtf_behavior/
     :alt: License
 
 .. image:: https://badges.gitter.im/collective/collective.edtf_behavior.svg
