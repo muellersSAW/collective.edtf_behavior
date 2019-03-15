@@ -61,7 +61,7 @@ class EDTFDateSearchIntegrationTest(unittest.TestCase):
             date_latest={
                 'query': datetime.date(1933, 4, 30),
                 'range': 'max',
-            }
+            },
         )
         self.assertEqual(
             len(results),
@@ -73,7 +73,7 @@ class EDTFDateSearchIntegrationTest(unittest.TestCase):
             date_latest={
                 'query': datetime.date(1933, 4, 29),
                 'range': 'max',
-            }
+            },
         )
         self.assertEqual(
             len(results),
@@ -85,7 +85,7 @@ class EDTFDateSearchIntegrationTest(unittest.TestCase):
             date_latest={
                 'query': datetime.date(1711, 11, 11),
                 'range': 'max',
-            }
+            },
         )
         self.assertEqual(
             len(results),
@@ -97,7 +97,7 @@ class EDTFDateSearchIntegrationTest(unittest.TestCase):
             date_latest={
                 'query': datetime.date(1711, 11, 11),
                 'range': 'min',
-            }
+            },
         )
         self.assertEqual(
             len(results),
@@ -112,7 +112,7 @@ class EDTFDateSearchIntegrationTest(unittest.TestCase):
                     datetime.date(1933, 4, 30),
                 ),
                 'range': 'min:max',
-            }
+            },
         )
         self.assertEqual(
             len(results),
@@ -126,7 +126,7 @@ class EDTFDateSearchIntegrationTest(unittest.TestCase):
             date_earliest={
                 'query': datetime.date(1711, 11, 11),
                 'range': 'min',
-            }
+            },
         )
         self.assertEqual(
             len(results),
@@ -138,7 +138,7 @@ class EDTFDateSearchIntegrationTest(unittest.TestCase):
             date_earliest={
                 'query': datetime.date(1920, 2, 3),
                 'range': 'min',
-            }
+            },
         )
         self.assertEqual(
             len(results),
@@ -150,7 +150,7 @@ class EDTFDateSearchIntegrationTest(unittest.TestCase):
             date_earliest={
                 'query': datetime.date(1920, 2, 6),
                 'range': 'min',
-            }
+            },
         )
         self.assertEqual(
             len(results),
@@ -162,7 +162,7 @@ class EDTFDateSearchIntegrationTest(unittest.TestCase):
             date_earliest={
                 'query': datetime.date(1920, 2, 6),
                 'range': 'max',
-            }
+            },
         )
         self.assertEqual(
             len(results),
@@ -177,7 +177,7 @@ class EDTFDateSearchIntegrationTest(unittest.TestCase):
                     datetime.date(1920, 2, 6),
                 ),
                 'range': 'min:max',
-            }
+            },
         )
         self.assertEqual(
             len(results),

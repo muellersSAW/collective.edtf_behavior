@@ -38,7 +38,7 @@ class EDTFDate(object):
 
     @property
     def edtf_date(self):
-        if hasattr(self.context, 'edtf_date'):
+        if hasattr(self.context, 'edtf_date'):  # NOQA: P002
             return self.context.edtf_date
         return None
 

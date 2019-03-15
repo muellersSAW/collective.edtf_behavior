@@ -23,12 +23,9 @@
 
 *** Settings *****************************************************************
 
-Resource  plone/app/robotframework/selenium.robot
-Resource  plone/app/robotframework/keywords.robot
+Resource  keywords.robot
 
-Library  Remote  ${PLONE_URL}/RobotRemote
-
-Test Setup  Open test browser
+Test Setup  Setup Example Content
 Test Teardown  Close all browsers
 
 
@@ -42,6 +39,9 @@ Scenario: As a member I want to be able to log into the website
 
 
 *** Keywords *****************************************************************
+
+Start browser
+  Open browser  ${PLONE_URL}  browser=${BROWSER}
 
 # --- Given ------------------------------------------------------------------
 
