@@ -53,13 +53,13 @@ After you activated the add-on in the Plone Add-ons section, you can Enable this
 Querying
 --------
 
-.. code-block::python
+.. code-block:: python
 
         from plone import api
 
 find any document which earliest date is 06.02.1920 or later.
 
-.. code-block::python
+.. code-block:: python
 
         results = api.content.find(
             portal_type='Document',
@@ -71,7 +71,7 @@ find any document which earliest date is 06.02.1920 or later.
 
 find any document which latest date is 11.11.1711 or earlier.
 
-.. code-block::python
+.. code-block:: python
 
         results = api.content.find(
             portal_type='Document',
@@ -85,7 +85,7 @@ This package provides a `DateRangeInRangeIndex <https://pypi.org/project/Product
 
 find all documents that fall at least with one start/end date of there interval into the range:
 
-.. code-block::python
+.. code-block:: python
 
         results = api.content.find(
             portal_type='Document',
