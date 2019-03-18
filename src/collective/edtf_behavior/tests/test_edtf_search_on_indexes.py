@@ -191,7 +191,7 @@ class EDTFDateSearchIntegrationTest(unittest.TestCase):
             portal_type='Document',
             edtf_start_end_range={
                 'start': datetime.date(1711, 11, 11),
-                'end':   datetime.date(1920, 2, 6),
+                'end': datetime.date(1920, 2, 6),
             },
         )
         self.assertEqual(
@@ -203,7 +203,7 @@ class EDTFDateSearchIntegrationTest(unittest.TestCase):
             portal_type='Document',
             edtf_start_end_range={
                 'start': datetime.date(1711, 11, 11),
-                'end':   datetime.date(1920, 2, 4),
+                'end': datetime.date(1920, 2, 4),
             },
         )
         self.assertEqual(
@@ -215,7 +215,7 @@ class EDTFDateSearchIntegrationTest(unittest.TestCase):
             portal_type='Document',
             edtf_start_end_range={
                 'start': datetime.date(1711, 11, 11),
-                'end':   datetime.date(1933, 4, 29),
+                'end': datetime.date(1933, 4, 29),
             },
         )
         self.assertEqual(
@@ -227,7 +227,7 @@ class EDTFDateSearchIntegrationTest(unittest.TestCase):
             portal_type='Document',
             edtf_start_end_range={
                 'start': datetime.date(1933, 4, 1),
-                'end':   datetime.date(1933, 5, 1),
+                'end': datetime.date(1933, 5, 1),
             },
         )
         self.assertEqual(
@@ -239,7 +239,7 @@ class EDTFDateSearchIntegrationTest(unittest.TestCase):
             portal_type='Document',
             edtf_start_end_range={
                 'start': datetime.date(1933, 4, 29),
-                'end':   datetime.date(1933, 5, 1),
+                'end': datetime.date(1933, 5, 1),
             },
         )
         self.assertEqual(
