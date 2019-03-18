@@ -2,8 +2,8 @@ Changelog
 =========
 
 
-1.0a2 (unreleased)
-------------------
+1.0 (2019-03-18)
+----------------
 
 - Add edtf_start_end_range index and document querying in the readme.
   [MrTango]
