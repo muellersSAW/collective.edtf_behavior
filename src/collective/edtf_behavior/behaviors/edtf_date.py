@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+from __future__ import absolute_import
 from collective.edtf_behavior import _
 from plone import schema
 from plone.autoform.interfaces import IFormFieldProvider

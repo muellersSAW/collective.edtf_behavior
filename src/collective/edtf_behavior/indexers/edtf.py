@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from __future__ import absolute_import
 from collective.edtf_behavior.behaviors.edtf_date import IEDTFDate
 from collective.edtf_behavior.behaviors.edtf_date import IEDTFDateMarker
 from plone.dexterity.interfaces import IDexterityContent

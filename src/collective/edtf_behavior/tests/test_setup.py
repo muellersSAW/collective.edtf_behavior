@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 """Setup tests for this package."""
+from __future__ import absolute_import
 from collective.edtf_behavior.testing import COLLECTIVE_EDTF_BEHAVIOR_INTEGRATION_TESTING  # noqa
 from plone import api
 from plone.app.testing import setRoles
