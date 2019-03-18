@@ -6,6 +6,11 @@
   <index name="date_latest" meta_type="DateIndex">
     <indexed_attr value="date_latest" />
   </index>
+>
+  <index name="edtf_start_end_range" meta_type="DateRangeInRangeIndex">
+    <startindex value="date_earliest" />
+    <endindex value="date_latest" />
+  </index>
   <index name="date_sort_ascending" meta_type="DateIndex">
     <indexed_attr value="date_sort_ascending" />
   </index>

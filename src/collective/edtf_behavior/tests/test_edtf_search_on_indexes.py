@@ -184,6 +184,69 @@ class EDTFDateSearchIntegrationTest(unittest.TestCase):
             3,
         )
 
+    def test_edtf_date_search_on_edtf_date_range(self):
+        # 1920-02-03 / 1920-02-06 / 1711-11-11
+
+        results = api.content.find(
+            portal_type='Document',
+            edtf_start_end_range={
+                'start': datetime.date(1711, 11, 11),
+                'end':   datetime.date(1920, 2, 6),
+            },
+        )
+        self.assertEqual(
+            len(results),
+            3,
+        )
+
+        results = api.content.find(
+            portal_type='Document',
+            edtf_start_end_range={
+                'start': datetime.date(1711, 11, 11),
+                'end':   datetime.date(1920, 2, 4),
+            },
+        )
+        self.assertEqual(
+            len(results),
+            2,
+        )
+
+        results = api.content.find(
+            portal_type='Document',
+            edtf_start_end_range={
+                'start': datetime.date(1711, 11, 11),
+                'end':   datetime.date(1933, 4, 29),
+            },
+        )
+        self.assertEqual(
+            len(results),
+            3,
+        )
+
+        results = api.content.find(
+            portal_type='Document',
+            edtf_start_end_range={
+                'start': datetime.date(1933, 4, 1),
+                'end':   datetime.date(1933, 5, 1),
+            },
+        )
+        self.assertEqual(
+            len(results),
+            2,
+        )
+
+        results = api.content.find(
+            portal_type='Document',
+            edtf_start_end_range={
+                'start': datetime.date(1933, 4, 29),
+                'end':   datetime.date(1933, 5, 1),
+            },
+        )
+        self.assertEqual(
+            len(results),
+            1,
+        )
+
     def test_edtf_date_sort_descending(self):
         results = api.content.find(
             portal_type='Document',

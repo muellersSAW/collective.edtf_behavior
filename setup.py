@@ -45,6 +45,7 @@ setup(
         'plone.api>=1.8.4',
         'plone.app.dexterity',
         'edtf',
+        'Products.DateRangeInRangeIndex',
     ],
     extras_require={
         'test': [

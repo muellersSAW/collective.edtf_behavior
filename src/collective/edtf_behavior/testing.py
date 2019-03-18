@@ -18,6 +18,10 @@ class CollectiveEdtfBehaviorLayer(PloneSandboxLayer):
         # Load any other ZCML that is required for your tests.
         # The z3c.autoinclude feature is disabled in the Plone fixture base
         # layer.
+        import Products.DateRangeInRangeIndex
+        self.loadZCML(package=Products.DateRangeInRangeIndex)
+        z2.installProduct(app, 'Products.DateRangeInRangeIndex')
+
         self.loadZCML(package=collective.edtf_behavior)
 
     def setUpPloneSite(self, portal):

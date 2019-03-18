@@ -40,3 +40,4 @@ reports/
 !.travis.yml
 !src/collective
 /.coverage.*
+/dist/*
