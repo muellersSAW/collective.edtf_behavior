@@ -2,10 +2,11 @@ Changelog
 =========
 
 
-1.1 (unreleased)
+1.0.1 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Add absolute_import statement to all files, to improve Py3 support, fix README syntax
+  [MrTango]
 
 
 1.0 (2019-03-18)
