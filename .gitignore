@@ -41,3 +41,4 @@ reports/
 !src/collective
 /.coverage.*
 /dist/*
+/extras/*
