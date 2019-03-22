@@ -5,7 +5,8 @@ Changelog
 1.0.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add edtf_parseable validator (constraint) to edtf_behavior
+  [MrTango]
 
 
 1.0.1 (2019-03-18)

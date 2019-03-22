@@ -2,12 +2,14 @@
 
 from __future__ import absolute_import
 from collective.edtf_behavior import _
+from edtf.parser.edtf_exceptions import EDTFParseException
 from plone import schema
 from plone.autoform.interfaces import IFormFieldProvider
 from plone.supermodel import model
 from zope.component import adapter
 from zope.interface import implementer
 from zope.interface import Interface
+from zope.interface import Invalid
 from zope.interface import provider
 
 import edtf
@@ -15,6 +17,21 @@ import edtf
 
 class IEDTFDateMarker(Interface):
     pass
+
+
+def edtf_parseable(value):
+    """ make sure value is parseable by parse_edtf
+    """
+
+    try:
+        edtf.parse_edtf(value)
+    except EDTFParseException:
+        raise Invalid(
+            _(u'Invalid EDTF date format!'),
+        )
+        return False
+    else:
+        return True
 
 
 @provider(IFormFieldProvider)
@@ -28,6 +45,7 @@ class IEDTFDate(model.Schema):
             u'Enter a date or date interval in <a target="_blank" href="http://www.loc.gov/standards/datetime/edtf.html">EDTF</a> format. Examples: "1860-03-31", "1860-03~," or "1860-03-31/1860-04-15"',  # NOQA E501
         ),
         required=False,
+        constraint=edtf_parseable,
     )
 
 

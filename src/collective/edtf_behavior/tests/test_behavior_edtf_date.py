@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import absolute_import
+from collective.edtf_behavior.behaviors.edtf_date import edtf_parseable
 from collective.edtf_behavior.behaviors.edtf_date import IEDTFDateMarker
 from collective.edtf_behavior.testing import COLLECTIVE_EDTF_BEHAVIOR_INTEGRATION_TESTING  # noqa
 from plone import api
@@ -100,3 +101,13 @@ class EDTFDateIntegrationTest(unittest.TestCase):
             doc_adapted.date_sort_descending,
             datetime.date(1860, 3, 13),
         )
+
+    def test_behavior_edtf_validator(self):
+        res = edtf_parseable('12.12.2018')
+        self.assertFalse(res)
+
+        res = edtf_parseable('2018-12-12')
+        self.assertTrue(res)
+
+        res = edtf_parseable('2018-12~')
+        self.assertTrue(res)
