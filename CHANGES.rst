@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.2 (unreleased)
+1.0.2 (2019-03-22)
 ------------------
 
 - Add edtf_parseable validator (constraint) to edtf_behavior
