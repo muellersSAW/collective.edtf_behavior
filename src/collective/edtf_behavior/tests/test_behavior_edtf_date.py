@@ -8,6 +8,7 @@ from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID
 from plone.behavior.interfaces import IBehavior
 from zope.component import getUtility
+from zope.interface import Invalid
 
 import datetime
 import unittest
@@ -103,8 +104,9 @@ class EDTFDateIntegrationTest(unittest.TestCase):
         )
 
     def test_behavior_edtf_validator(self):
-        res = edtf_parseable('12.12.2018')
-        self.assertFalse(res)
+        with self.assertRaises(Invalid):
+            res = edtf_parseable('12.12.2018')
+            self.assertFalse(res)
 
         res = edtf_parseable('2018-12-12')
         self.assertTrue(res)
