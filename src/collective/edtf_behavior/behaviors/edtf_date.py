@@ -71,8 +71,6 @@ class EDTFDate(object):
         if not self.context.edtf_date:
             return
         edtf_obj = edtf.parse_edtf(self.context.edtf_date)
-        if not edtf_obj:
-            return
         return edtf.struct_time_to_date(edtf_obj.lower_fuzzy())
 
     @property
@@ -80,8 +78,6 @@ class EDTFDate(object):
         if not self.context.edtf_date:
             return
         edtf_obj = edtf.parse_edtf(self.context.edtf_date)
-        if not edtf_obj:
-            return
         return edtf.struct_time_to_date(edtf_obj.upper_fuzzy())
 
     @property
@@ -89,8 +85,6 @@ class EDTFDate(object):
         if not self.context.edtf_date:
             return
         edtf_obj = edtf.parse_edtf(self.context.edtf_date)
-        if not edtf_obj:
-            return
         return edtf.struct_time_to_date(edtf_obj.lower_strict())
 
     @property
@@ -98,6 +92,4 @@ class EDTFDate(object):
         if not self.context.edtf_date:
             return
         edtf_obj = edtf.parse_edtf(self.context.edtf_date)
-        if not edtf_obj:
-            return
         return edtf.struct_time_to_date(edtf_obj.upper_strict())

@@ -15,30 +15,22 @@ def dummy(obj):
 @indexer(IEDTFDateMarker)
 def date_latest(obj):
     adapted_obj = IEDTFDate(obj)
-    if not adapted_obj:
-        return
     return adapted_obj.date_latest
 
 
 @indexer(IEDTFDateMarker)
 def date_earliest(obj):
     adapted_obj = IEDTFDate(obj)
-    if not adapted_obj:
-        return
     return adapted_obj.date_earliest
 
 
 @indexer(IEDTFDateMarker)
 def date_sort_ascending(obj):
     adapted_obj = IEDTFDate(obj)
-    if not adapted_obj:
-        return
     return adapted_obj.date_sort_ascending
 
 
 @indexer(IEDTFDateMarker)
 def date_sort_descending(obj):
     adapted_obj = IEDTFDate(obj)
-    if not adapted_obj:
-        return
     return adapted_obj.date_sort_descending
