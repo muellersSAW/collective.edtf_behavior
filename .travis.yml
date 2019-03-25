@@ -58,11 +58,11 @@ script:
   - bin/code-analysis
   - bin/test --all
 
-after_script:
-  - bin/createcoverage --output-dir=parts/test/coverage
+#after_script:
 
 after_success:
   - bin/pip install coverage
   - bin/python -m coverage.pickle2json
   - bin/pip install -q coveralls
+  - bin/createcoverage --output-dir=parts/test/coverage
   - coveralls
