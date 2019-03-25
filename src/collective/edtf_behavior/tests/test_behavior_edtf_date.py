@@ -3,6 +3,7 @@ from __future__ import absolute_import
 from collective.edtf_behavior.behaviors.edtf_date import edtf_parseable
 from collective.edtf_behavior.behaviors.edtf_date import IEDTFDateMarker
 from collective.edtf_behavior.testing import COLLECTIVE_EDTF_BEHAVIOR_INTEGRATION_TESTING  # noqa
+from collective.edtf_behavior.upgrades import reload_gs_profile
 from plone import api
 from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID
@@ -113,3 +114,6 @@ class EDTFDateIntegrationTest(unittest.TestCase):
 
         res = edtf_parseable('2018-12~')
         self.assertTrue(res)
+
+    def test_upgrades_reload_gs_profile(self):
+        reload_gs_profile(self.portal)
