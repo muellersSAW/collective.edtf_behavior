@@ -42,3 +42,4 @@ reports/
 /.coverage.*
 /dist/*
 /extras/*
+/coverage.xml

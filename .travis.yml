@@ -64,5 +64,6 @@ after_success:
   - bin/pip install coverage
   - bin/python -m coverage.pickle2json
   - bin/pip install -q coveralls
-  - bin/createcoverage --output-dir=parts/test/coverage
-  - coveralls
+#  - bin/createcoverage --output-dir=parts/test/coverage
+  - bin/createcoverage
+  - bin/coveralls
