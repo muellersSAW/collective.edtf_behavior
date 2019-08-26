@@ -5,7 +5,8 @@ Changelog
 1.0.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Faxed test and test setup, small cleanup
+  [MrTango]
 
 
 1.0.2 (2019-03-22)
