@@ -2,7 +2,6 @@
 
 from __future__ import absolute_import
 from collective.edtf_behavior import _
-from edtf.parser.edtf_exceptions import EDTFParseException
 from plone import schema
 from plone.autoform.interfaces import IFormFieldProvider
 from plone.supermodel import model
@@ -12,7 +11,10 @@ from zope.interface import Interface
 from zope.interface import Invalid
 from zope.interface import provider
 
-import edtf
+from edtf2.parser.edtf_exceptions import EDTFParseException
+from edtf2 import parse_edtf, struct_time_to_date
+from datetime import date
+import math
 
 
 class IEDTFDateMarker(Interface):
@@ -24,7 +26,7 @@ def edtf_parseable(value):
     """
 
     try:
-        edtf.parse_edtf(value)
+        parse_edtf(value)
     except EDTFParseException:
         raise Invalid(
             _(u'Invalid EDTF date format!'),
@@ -70,26 +72,38 @@ class EDTFDate(object):
     def date_earliest(self):
         if not self.context.edtf_date:
             return
-        edtf_obj = edtf.parse_edtf(self.context.edtf_date)
-        return edtf.struct_time_to_date(edtf_obj.lower_fuzzy())
+        edtf_obj = parse_edtf(self.context.edtf_date)
+        result = edtf_obj.lower_fuzzy()
+        if result == -math.inf:
+            return date.min
+        return struct_time_to_date(result)
 
     @property
     def date_latest(self):
         if not self.context.edtf_date:
             return
-        edtf_obj = edtf.parse_edtf(self.context.edtf_date)
-        return edtf.struct_time_to_date(edtf_obj.upper_fuzzy())
+        edtf_obj = parse_edtf(self.context.edtf_date)
+        result = edtf_obj.upper_fuzzy()
+        if result == math.inf:
+            return date.max
+        return struct_time_to_date(result)
 
     @property
     def date_sort_ascending(self):
         if not self.context.edtf_date:
             return
-        edtf_obj = edtf.parse_edtf(self.context.edtf_date)
-        return edtf.struct_time_to_date(edtf_obj.lower_strict())
+        edtf_obj = parse_edtf(self.context.edtf_date)
+        result = edtf_obj.lower_strict()
+        if result == -math.inf:
+            return date.min
+        return struct_time_to_date(result)
 
     @property
     def date_sort_descending(self):
         if not self.context.edtf_date:
             return
-        edtf_obj = edtf.parse_edtf(self.context.edtf_date)
-        return edtf.struct_time_to_date(edtf_obj.upper_strict())
+        edtf_obj = parse_edtf(self.context.edtf_date)
+        result = edtf_obj.upper_strict()
+        if result == math.inf:
+            return date.max
+        return struct_time_to_date(result)

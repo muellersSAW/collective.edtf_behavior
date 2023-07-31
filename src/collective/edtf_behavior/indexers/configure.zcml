@@ -13,25 +13,25 @@
   <!-- indexer -->
   <adapter
     name="date_earliest"
-    factory=".edtf.date_earliest"
+    factory=".edtf.date_earliest_idx"
     />
 
   <!-- indexer -->
   <adapter
     name="date_latest"
-    factory=".edtf.date_latest"
+    factory=".edtf.date_latest_idx"
     />
 
   <!-- indexer -->
   <adapter
     name="date_sort_ascending"
-    factory=".edtf.date_sort_ascending"
+    factory=".edtf.date_sort_ascending_idx"
     />
 
   <!-- indexer -->
   <adapter
     name="date_sort_descending"
-    factory=".edtf.date_sort_descending"
+    factory=".edtf.date_sort_descending_idx"
     />
 
 </configure>
