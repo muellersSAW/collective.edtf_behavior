@@ -12,5 +12,13 @@
     handler=".upgrades.reload_gs_profile"
     />
 
+  <genericsetup:upgradeStep
+    source="1001"
+    destination="1002"
+    title="Upgrade to edtf2"
+    description=""
+    profile="collective.edtf_behavior:default"
+    handler=".upgrades.to_1002"
+    />
 
 </configure>
