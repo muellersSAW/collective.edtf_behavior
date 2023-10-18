@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.0.0 (unreleased)
+2.0.0 (2023-10-18)
 ------------------
 
 - using edtf2 package which implements the newest edtf specification (2019-02-04) [muellers]
