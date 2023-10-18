@@ -8,6 +8,11 @@ Changelog
 - using edtf2 package which implements the newest edtf specification (2019-02-04) [muellers]
 - adjusting indexe to convert infinity results to datetime.min and datetime.max; in general the date_latest and date_earliest indexe are based on pythons datetime package where we have the 1 AD - 9999 AD limitation, so they are not useable for dates outside this limitation [muellers]
 
+1.0.4 (2023-10-18)
+------------------
+
+- fixed wrong python_requires statement in setup.py [muellers]
+
 
 1.0.3 (2019-08-26)
 ------------------
