@@ -2,10 +2,10 @@ Changelog
 =========
 
 
-1.0.4 (unreleased)
+1.0.4 (2023-10-18)
 ------------------
 
-- Nothing changed yet.
+- fixed wrong python_requires statement in setup.py [muellers]
 
 
 1.0.3 (2019-08-26)
