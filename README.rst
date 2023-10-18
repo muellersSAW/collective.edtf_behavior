@@ -20,8 +20,6 @@ collective.edtf_behavior
 
 A Plone behavior which provides a `EDTF <http://www.loc.gov/standards/datetime/edtf.html>`_  Date field and some indexes to search and sort on complex and historic dates.
 
-Note: the current implementation of the used library `python-edtf <https://pypi.org/project/edtf/>`_ , still uses an earlier draft of the standard: http://www.loc.gov/standards/datetime/pre-submission.html
-
 
 Features
 --------
