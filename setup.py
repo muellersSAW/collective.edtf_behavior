@@ -14,7 +14,7 @@ long_description = '\n\n'.join([
 
 setup(
     name='collective.edtf_behavior',
-    version='1.0.4',
+    version='2.0.0',
     description="A EDTF behavior for Plone.",
     long_description=long_description,
     # Get more from https://pypi.python.org/pypi?%3Aaction=list_classifiers
@@ -47,7 +47,7 @@ setup(
         # -*- Extra requirements: -*-
         'plone.api>=1.8.4',
         'plone.app.dexterity',
-        'edtf',
+        'edtf2',
         'Products.DateRangeInRangeIndex',
     ],
     extras_require={

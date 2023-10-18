@@ -13,24 +13,25 @@ def dummy(obj):
 
 
 @indexer(IEDTFDateMarker)
-def date_latest(obj):
+def date_latest_idx(obj):
     adapted_obj = IEDTFDate(obj)
     return adapted_obj.date_latest
 
 
 @indexer(IEDTFDateMarker)
-def date_earliest(obj):
+def date_earliest_idx(obj):
     adapted_obj = IEDTFDate(obj)
-    return adapted_obj.date_earliest
+    test = adapted_obj.date_earliest
+    return test
 
 
 @indexer(IEDTFDateMarker)
-def date_sort_ascending(obj):
+def date_sort_ascending_idx(obj):
     adapted_obj = IEDTFDate(obj)
     return adapted_obj.date_sort_ascending
 
 
 @indexer(IEDTFDateMarker)
-def date_sort_descending(obj):
+def date_sort_descending_idx(obj):
     adapted_obj = IEDTFDate(obj)
     return adapted_obj.date_sort_descending
